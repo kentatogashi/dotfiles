@@ -29,7 +29,9 @@ set number
 set cursorline
 syntax on
 
-inoremap <silent> jj <ESC>
+
+inoremap <silent> jj <Esc>
+inoremap <silent> <C-j> <Esc>
 inoremap { {}<Left>
 inoremap [ []<Left>
 inoremap ( ()<Left>
@@ -40,6 +42,8 @@ inoremap <> <><Left>
 nnoremap <Space>h ^
 nnoremap <Space>l $
 nnoremap <Space> jzz
+nnoremap 0 $
+nnoremap 1 0
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
@@ -76,9 +80,26 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'mattn/zencoding-vim'
 NeoBundle 'thinca/vim-quickrun'
 nnoremap <silent> <Space>qr :<C-u>QuickRun<CR>
+
+" zencoding-vim
+let g:user_zen_leader_key = ''
+let g:user_zen_settings = {
+      \ 'lang' : 'ja',
+      \ 'html' : {
+      \ 'filters' : 'html',
+      \ 'indentation' : ' '
+      \ },
+      \ 'css' : {
+      \ 'filters' : 'fc',
+      \ },
+      \}
+
 call neobundle#end()
 
 filetype plugin indent on
 filetype indent on
 syntax on
 syntax enable
+hi LineNr ctermbg=0 ctermfg=0
+hi CursorLineNr ctermbg=4 ctermfg=0
+hi clear CursorLine
