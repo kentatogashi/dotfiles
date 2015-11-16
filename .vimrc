@@ -29,7 +29,6 @@ set number
 set cursorline
 syntax on
 
-
 inoremap <silent> jj <Esc>
 inoremap <silent> <C-j> <Esc>
 inoremap { {}<Left>
@@ -57,7 +56,7 @@ endif
 call neobundle#begin(expand('~/.vim/bundle'))
 let g:neobundle_default_git_protocol='https'
 
-NeoBundleFetch 'Shougo/neobundle.vim'
+"NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 " let g:unite_enable_start_insert=1

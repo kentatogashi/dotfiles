@@ -5,6 +5,4 @@
 
 ```cd dotfiles```
 
-```bash setup.sh```
-
-exec ```:BundleInstall``` in .vimrc
+```bash setup```
